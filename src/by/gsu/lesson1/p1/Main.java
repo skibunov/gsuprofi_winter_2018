@@ -1,6 +1,5 @@
 package by.gsu.lesson1.p1;
 
-import by.gsu.lesson1.Taxi;
 
 public class Main {
     public static void main(String[] args) {
