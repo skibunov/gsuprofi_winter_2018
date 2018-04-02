@@ -9,7 +9,9 @@ public class CallableExample {
         ExecutorService service
                 = Executors.newSingleThreadExecutor();
 
-        Future<Integer> future = service.submit(new SomeCallable());
+        Future<Integer> future = service.submit(
+                new SomeCallable()
+        );
 
         service.shutdown();
 
