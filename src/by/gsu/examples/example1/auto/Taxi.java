@@ -1,0 +1,45 @@
+package by.gsu.examples.example1.auto;
+
+import java.util.Objects;
+
+public class Taxi extends Car {
+    private int passengers;
+
+    public Taxi() {
+    }
+
+    public Taxi(String mark, int passengers) {
+        super(mark);
+        this.passengers = passengers;
+    }
+
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Taxi)) return false;
+        if (!super.equals(o)) return false;
+        Taxi taxi = (Taxi) o;
+        return passengers == taxi.passengers;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(super.hashCode(), passengers);
+    }
+
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "passengers=" + passengers +
+                "} " + super.toString();
+    }
+}
