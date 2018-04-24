@@ -21,7 +21,8 @@ public class SocketHelper {
         this.port = port;
     }
 
-    public void communicate(Supplier<Request> requestSupplier, Consumer<Response> responseConsumer) {
+    public void communicate(Supplier<Request> requestSupplier,
+                            Consumer<Response> responseConsumer) {
         try (Socket socket = new Socket(host, port)) {
 
             processRequest(socket, requestSupplier);

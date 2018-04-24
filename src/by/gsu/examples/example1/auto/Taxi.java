@@ -2,8 +2,15 @@ package by.gsu.examples.example1.auto;
 
 import java.util.Objects;
 
+@Table(name = "taxi", collation = "cp1251")
 public class Taxi extends Car {
+
+//    @Column(name = "Passs", length = 123)
     private int passengers;
+
+    private void test(int randomParamName) {
+        System.out.println("it's Taxi test! " + randomParamName);
+    }
 
     public Taxi() {
     }
