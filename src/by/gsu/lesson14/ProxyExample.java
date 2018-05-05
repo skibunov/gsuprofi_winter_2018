@@ -7,7 +7,9 @@ import java.lang.reflect.Proxy;
 public class ProxyExample {
 
     public static void main(String[] args) {
-        String x = getFactory().get();
+        LittleFactory factory = getFactory();
+        System.out.println(factory.getClass());
+        String x = factory.get();
         System.out.println(x);
     }
 
