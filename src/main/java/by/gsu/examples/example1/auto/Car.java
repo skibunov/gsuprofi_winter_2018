@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public abstract class Car implements Comparable<Car>, Cloneable, Serializable {
+    private Integer id;
     private String mark;
 
     private static long serialVersionUID = 0;
@@ -26,6 +27,14 @@ public abstract class Car implements Comparable<Car>, Cloneable, Serializable {
 
     public void setMark(String mark) {
         this.mark = mark;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Override
@@ -52,6 +61,7 @@ public abstract class Car implements Comparable<Car>, Cloneable, Serializable {
     @Override
     public String toString() {
         return "Car{" +
+                "id='" + id + '\'' +
                 "mark='" + mark + '\'' +
                 '}';
     }
